@@ -1,0 +1,89 @@
+/* Основной стиль для доски */
+.board {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+/* Стиль для колонок */
+.column {
+  width: 30%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  min-height: 400px;
+}
+
+/* Заголовок колонки */
+.column-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Контейнер для карточек */
+.card-container {
+  min-height: 200px;
+  padding: 10px;
+}
+
+/* Стиль для каждой карточки */
+.card {
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  cursor: grab; /* Курсор захвата */
+  position: relative;
+}
+
+/* Показываем крестик при наведении на карточку */
+.card:hover .delete {
+  display: block;
+}
+
+/* Стиль для крестика */
+.delete {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  font-size: 20px;
+  color: red;
+  display: none;
+  cursor: pointer;
+}
+
+/* Стиль для кнопки добавления карточки */
+.add-card {
+  margin-top: 10px;
+  padding: 5px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-card:hover {
+  background-color: #45a049;
+}
+
+/* Курсор для карточки во время перетаскивания */
+.card:active {
+  cursor: grabbing !important;
+}
+
+/* Добавляем перетаскивание на колонках */
+.column {
+  cursor: grab;
+}
+
+.column:active {
+  cursor: grabbing;
+}
+
+/* Стиль для перетаскивания в колонке */
+.column .card {
+  transition: all 0.2s ease-in-out;
+}

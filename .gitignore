@@ -26,11 +26,6 @@ Thumbs.db
 # npm package-lock files
 /package-lock.json
 
-# yarn lock file (если используешь yarn)
-/yarn.lock
-
-# Webpack config output
-/webpack.config.js
 
 # macOS specific
 *.swp
